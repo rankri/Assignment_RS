@@ -3,28 +3,22 @@ public class Armstrong {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		System.out.println("Armstrong numbers between 1 and 1000 are:");
-		double calc = 0;
-		
-		double i =153;
-		double x =i;
-			
-			
-				while (i!=0) {
-				double lastDigit = i%10;		
-				calc = calc + (lastDigit*lastDigit*lastDigit);
-				i = i/10;
-				break;
-				}
-				
-			if (calc ==x ) {
-			System.out.print(x+" ");	
-			
+		double n,rem,sum=0;
+		System.out.println("Armstrong between 1 and 1000 are:");
+		for (double i=1; i<1000;i++) {
+			n=i;
+			while(n!=0) {
+				rem = n%10;
+				sum = sum + Math.pow(rem,3);
+				n = n/10;
+			}
+			if (sum==i) {
+				System.out.print(i+ " ");
+			}
+			sum = 0;
 		}
-			
 		
-			
+		}		
 	}
 
-}
+
